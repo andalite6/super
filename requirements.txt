@@ -1,0 +1,388 @@
+# AI Red Team Super Tool v6.0 - Complete Requirements
+# Last Updated: June 2024
+# Python 3.10+ required (3.11 recommended)
+#
+# IMPORTANT: First upgrade pip to latest version:
+# python -m pip install --upgrade pip>=24.0
+#
+# Then install requirements:
+# pip install -r requirements.txt
+
+# =============================================================================
+# CORE DEPENDENCIES (LATEST VERSIONS)
+# =============================================================================
+
+# Web Framework - LATEST STREAMLIT
+streamlit>=1.35.0  # Latest stable version (June 2024)
+
+# Data Science Essentials
+pandas>=2.2.2      # Latest pandas with performance improvements
+numpy>=1.26.4      # Latest NumPy with Python 3.12 support
+scipy>=1.13.1      # Scientific computing
+
+# Visualization
+matplotlib>=3.9.0   # Latest plotting library
+seaborn>=0.13.2    # Statistical visualization
+plotly>=5.22.0     # Interactive plots
+altair>=5.3.0      # Declarative visualization
+
+# Report Generation
+reportlab>=4.2.0   # PDF generation
+openpyxl>=3.1.2    # Excel file support
+xlsxwriter>=3.2.0  # Excel writing
+
+# =============================================================================
+# AI/LLM API CLIENTS (LATEST VERSIONS)
+# =============================================================================
+
+# OpenAI
+openai>=1.35.0     # Latest with GPT-4o support
+
+# Anthropic
+anthropic>=0.28.0  # Latest with Claude 3.5 support
+
+# Other LLM Providers
+mistralai>=0.3.0   # Mistral AI models
+groq>=0.5.0        # Groq cloud API
+cohere>=5.5.0      # Cohere models
+replicate>=0.25.0  # Replicate platform
+
+# Hugging Face
+transformers>=4.41.2  # Latest transformers
+huggingface-hub>=0.23.3
+tokenizers>=0.19.1
+accelerate>=0.31.0
+datasets>=2.19.2
+
+# =============================================================================
+# RED TEAMING FRAMEWORKS
+# =============================================================================
+
+# NVIDIA Garak
+garak>=0.9.0.14    # Latest vulnerability scanner
+
+# Microsoft PyRIT  
+pyrit-ai>=0.3.0    # Latest PyRIT version
+azure-identity>=1.16.1
+azure-keyvault-secrets>=4.8.0
+
+# Note: Additional frameworks
+# deepteam - Install from GitHub if available
+# promptfoo - Install via npm: npm install -g promptfoo@latest
+
+# =============================================================================
+# ASYNC & NETWORKING
+# =============================================================================
+
+# Async Support
+aiohttp>=3.9.5     # Async HTTP client
+httpx>=0.27.0      # Modern HTTP client
+anyio>=4.4.0       # Async compatibility
+asyncio-throttle>=1.0.0
+aiofiles>=23.2.1   # Async file operations
+
+# Standard Networking
+requests>=2.32.3   # HTTP library
+urllib3>=2.2.1     # HTTP client
+websockets>=12.0   # WebSocket support
+
+# =============================================================================
+# UTILITIES & HELPERS
+# =============================================================================
+
+# Configuration & Environment
+python-dotenv>=1.0.1   # Environment variables
+pyyaml>=6.0.1         # YAML support
+toml>=0.10.2          # TOML config files
+environs>=11.0.0      # Environment parsing
+
+# Data Formats
+jsonlines>=4.0.0      # JSONL support
+orjson>=3.10.3        # Fast JSON
+ujson>=5.10.0         # Ultra fast JSON
+msgpack>=1.0.8        # Binary serialization
+
+# CLI & Terminal
+click>=8.1.7          # CLI framework
+typer>=0.12.3         # Modern CLI
+rich>=13.7.1          # Rich terminal output
+colorama>=0.4.6       # Cross-platform colors
+
+# Progress & Logging
+tqdm>=4.66.4          # Progress bars
+loguru>=0.7.2         # Advanced logging
+structlog>=24.2.0     # Structured logging
+
+# =============================================================================
+# DATA PROCESSING & ML
+# =============================================================================
+
+# Machine Learning
+scikit-learn>=1.5.0   # ML algorithms
+xgboost>=2.0.3        # Gradient boosting
+lightgbm>=4.3.0       # Fast gradient boosting
+catboost>=1.2.5       # Categorical boosting
+
+# Deep Learning
+torch>=2.3.1          # PyTorch
+torchvision>=0.18.1   # Computer vision
+torchaudio>=2.3.1     # Audio processing
+tensorflow>=2.16.1    # TensorFlow (optional)
+
+# NLP
+nltk>=3.8.1           # Natural language toolkit
+spacy>=3.7.4          # Industrial NLP
+sentencepiece>=0.2.0  # Tokenization
+sentence-transformers>=3.0.1  # Embeddings
+
+# =============================================================================
+# SECURITY & VALIDATION
+# =============================================================================
+
+# Security
+cryptography>=42.0.8  # Cryptographic recipes
+pycryptodome>=3.20.0  # Crypto library
+secrets-guard>=0.2.0  # Secret management
+python-jose>=3.3.0    # JWT tokens
+
+# Validation
+pydantic>=2.7.4       # Data validation
+pydantic-settings>=2.3.3
+jsonschema>=4.22.0    # JSON schema validation
+cerberus>=1.3.5       # Data validation
+
+# =============================================================================
+# DATABASE & STORAGE
+# =============================================================================
+
+# SQL Databases
+sqlalchemy>=2.0.30    # SQL toolkit
+alembic>=1.13.1       # Database migrations
+aiosqlite>=0.20.0     # Async SQLite
+asyncpg>=0.29.0       # Async PostgreSQL
+aiomysql>=0.2.0       # Async MySQL
+
+# NoSQL & Caching
+redis>=5.0.4          # Redis client
+motor>=3.4.0          # Async MongoDB
+elasticsearch>=8.13.2 # Elasticsearch
+
+# Cloud Storage
+boto3>=1.34.127       # AWS SDK
+azure-storage-blob>=12.20.0  # Azure Storage
+google-cloud-storage>=2.17.0  # Google Cloud
+
+# =============================================================================
+# WEB SCRAPING & PARSING
+# =============================================================================
+
+# HTML/XML Parsing
+beautifulsoup4>=4.12.3  # HTML parsing
+lxml>=5.2.2            # XML processing
+html5lib>=1.1          # HTML5 parser
+selectolax>=0.3.21     # Fast HTML parser
+
+# Web Automation
+playwright>=1.44.0     # Browser automation
+selenium>=4.21.0       # Web driver
+pyppeteer>=2.0.0      # Headless Chrome
+
+# =============================================================================
+# TESTING & QUALITY
+# =============================================================================
+
+# Testing Frameworks
+pytest>=8.2.2         # Testing framework
+pytest-asyncio>=0.23.7
+pytest-cov>=5.0.0     # Coverage plugin
+pytest-mock>=3.14.0   # Mocking support
+pytest-xdist>=3.6.1   # Parallel testing
+
+# Test Utilities
+faker>=25.3.0         # Fake data generation
+hypothesis>=6.103.1   # Property-based testing
+factory-boy>=3.3.0    # Test fixtures
+responses>=0.25.3     # Mock HTTP
+
+# Code Quality
+black>=24.4.2         # Code formatter
+isort>=5.13.2         # Import sorting
+flake8>=7.0.0         # Linting
+pylint>=3.2.3         # Static analysis
+mypy>=1.10.0          # Type checking
+ruff>=0.4.9           # Fast linter
+
+# Coverage & Profiling
+coverage>=7.5.3       # Code coverage
+pytest-benchmark>=4.0.0
+memory-profiler>=0.61.0
+line-profiler>=4.1.2
+
+# =============================================================================
+# DOCUMENTATION
+# =============================================================================
+
+sphinx>=7.3.7         # Documentation generator
+sphinx-rtd-theme>=2.0.0
+sphinx-autodoc-typehints>=2.1.0
+mkdocs>=1.6.0         # Alternative docs
+mkdocs-material>=9.5.26
+
+# =============================================================================
+# SYSTEM & PERFORMANCE
+# =============================================================================
+
+# System Monitoring
+psutil>=6.0.0         # System utilities
+py-cpuinfo>=9.0.0     # CPU information
+gputil>=1.4.0         # GPU monitoring
+nvidia-ml-py>=12.535.133  # NVIDIA GPU
+
+# Performance
+numba>=0.60.0         # JIT compilation
+cython>=3.0.10        # C extensions
+bottleneck>=1.3.8     # Fast NumPy functions
+numexpr>=2.10.0       # Fast numerical expressions
+
+# =============================================================================
+# DEVELOPMENT TOOLS
+# =============================================================================
+
+# Version Control
+gitpython>=3.1.43     # Git integration
+pre-commit>=3.7.1     # Git hooks
+
+# Debugging
+ipython>=8.24.0       # Enhanced Python shell
+ipdb>=0.13.13         # IPython debugger
+pdbpp>=0.10.3         # Enhanced pdb
+
+# Notebooks (optional)
+jupyter>=1.0.0        # Jupyter metapackage
+notebook>=7.2.1       # Jupyter notebook
+jupyterlab>=4.2.2     # JupyterLab
+nbconvert>=7.16.4     # Notebook conversion
+
+# =============================================================================
+# ADDITIONAL UTILITIES
+# =============================================================================
+
+# Date & Time
+python-dateutil>=2.9.0
+pytz>=2024.1          # Timezone support
+tzdata>=2024.1        # Timezone data
+pendulum>=3.0.0       # Better datetime
+
+# Text Processing
+ftfy>=6.2.0           # Fix text encoding
+chardet>=5.2.0        # Character detection
+unidecode>=1.3.8      # Unicode transliteration
+python-slugify>=8.0.4 # Slug generation
+
+# File Handling
+python-magic>=0.4.27  # File type detection
+filetype>=1.2.0       # File type inference
+pypdf>=4.2.0          # PDF manipulation
+python-docx>=1.1.2    # Word documents
+
+# Rate Limiting
+ratelimit>=2.2.1      # Function rate limiting
+backoff>=2.2.1        # Retry with backoff
+tenacity>=8.3.0       # Retrying library
+
+# Task Scheduling
+schedule>=1.2.2       # Job scheduling
+apscheduler>=3.10.4   # Advanced scheduler
+celery>=5.4.0         # Distributed tasks
+
+# Email
+emails>=0.6           # Email sending
+yagmail>=0.15.293     # Gmail simplification
+
+# Image Processing
+pillow>=10.3.0        # Image library
+opencv-python>=4.10.0.82  # Computer vision
+imageio>=2.34.1       # Image I/O
+
+# Audio Processing
+pydub>=0.25.1         # Audio manipulation
+librosa>=0.10.2       # Audio analysis
+
+# Container Support
+docker>=7.1.0         # Docker API
+
+# =============================================================================
+# PLATFORM-SPECIFIC NOTES
+# =============================================================================
+
+# Windows-specific:
+# - May require Visual C++ Build Tools for some packages
+# - Install from: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+# macOS-specific:
+# - May require Xcode Command Line Tools
+# - Install with: xcode-select --install
+
+# Linux-specific:
+# - May require build-essential package
+# - Install with: sudo apt-get install build-essential
+
+# =============================================================================
+# GPU SUPPORT (OPTIONAL)
+# =============================================================================
+
+# For CUDA support, install PyTorch with:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# For Apple Silicon (M1/M2) acceleration:
+# pip install torch torchvision torchaudio
+
+# =============================================================================
+# INSTALLATION NOTES
+# =============================================================================
+
+# 1. Always upgrade pip first:
+#    python -m pip install --upgrade pip
+
+# 2. Install all requirements:
+#    pip install -r requirements.txt
+
+# 3. For development dependencies only:
+#    pip install -r requirements-dev.txt
+
+# 4. To update all packages to latest:
+#    pip install --upgrade -r requirements.txt
+
+# 5. To check for outdated packages:
+#    pip list --outdated
+
+# 6. For a minimal installation, use requirements-minimal.txt
+
+# =============================================================================
+# VERSION PINNING STRATEGY
+# =============================================================================
+
+# - Use >= for packages that maintain backward compatibility
+# - Pin exact versions for critical dependencies in production
+# - Update regularly using: python update_dependencies.py
+# - Test thoroughly after updates
+
+# =============================================================================
+# TROUBLESHOOTING
+# =============================================================================
+
+# If installation fails:
+# 1. Upgrade pip: python -m pip install --upgrade pip
+# 2. Install wheel: pip install wheel
+# 3. Try installing packages individually
+# 4. Check platform-specific notes above
+# 5. Use --no-cache-dir flag: pip install --no-cache-dir package_name
+
+# For specific framework issues:
+# - Garak: pip install git+https://github.com/NVIDIA/garak.git
+# - PyRIT: Ensure Azure dependencies are installed first
+# - Promptfoo: Requires Node.js 18+, install with npm
+
+# =============================================================================
+# END OF REQUIREMENTS
+# =============================================================================
